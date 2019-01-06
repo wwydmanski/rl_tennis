@@ -1,5 +1,11 @@
 # Algorithm overview
-Agent's brain was a Deep Deterministic Policy Gradient, an Actor-Critic class Reinforcement Learning algorithm.
+Agent's brain was a Deep Deterministic Policy Gradient, an Actor-Critic class Reinforcement Learning algorithm. It is an actor-critic algorithm, which means that it incorporates two separate neural networks.
+
+One of them acts as an actor - it has one output for every dimention of action space and is directly responsible for actions of agent. 
+
+The other one is a critic - it assesses expected reward for choosing each state, and serves as loss function for the actor. 
+
+Training of the actor is then focused on maximising critic output, while critic is trained in a DQN-like manner
 
 ## Parameters
 ### Hyperparameters
@@ -52,4 +58,4 @@ Intermediate steps that helped the algorithm
 1. Incorporating the idea stating that "the bigger minibatch, the bigger the learning rate should be"
 
 ## Improvements ideas
-Introducing parameter noise could be a great improvement to quality of learning
+Introducing parameter noise could be a great improvement to quality of learning, as well as using prioritised experience buffer.
