@@ -42,16 +42,14 @@ Agent's brain was a Deep Deterministic Policy Gradient, an Actor-Critic class Re
 
 
 ## Results
-Agent was able to solve the environment in 881 episodes (mean window starting at 881st episode exceeded solution threshold)
+Agent was able to solve the environment in 791 episodes (mean window starting at 791st episode exceeded solution threshold).
 
 ![Result](result.png)
 
 ## Small breakthrougs
 Intermediate steps that helped the algorithm
 
-1. Adding batch_norm
-2. Using noise decay with $\frac{1}{sqrt(episode\_no)}$ rate
-3. Incorporating gradient clipping
+1. Incorporating the idea stating that "the bigger minibatch, the bigger the learning rate should be"
 
 ## Improvements ideas
 Introducing parameter noise could be a great improvement to quality of learning

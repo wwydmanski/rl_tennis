@@ -13,7 +13,7 @@ The observation space consists of 8 variables corresponding to the position and 
 Agent's brain was a Deep Deterministic Policy Gradient, an Actor-Critic class Reinforcement Learning algorithm, implemented according to https://arxiv.org/abs/1509.02971 with Ornstein-Uhlenbeck random process.
 
 ## Results
-Agent was able to solve the environment in 881 episodes (mean window starting at 881st episode exceeded solution threshold)
+Agent was able to solve the environment in 791 episodes (mean window starting at 791st episode exceeded solution threshold)
 
 ![Result](result.png)
 
@@ -33,8 +33,8 @@ You need to manually download environment binaries for your system:
   - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
   - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
   
-After downloading, unpack all files and place them in directory `data/`. Then, swap string in cell 2 
+After downloading, unpack all files and place them in directory `Tennis_Windows_x86_64/`. Then, swap string in cell 2 
 ```
-env = UnityEnvironment(file_name='Reacher/Reacher.exe')
+env = UnityEnvironment(file_name="Tennis_Windows_x86_64/Tennis.exe")
 ```
 with one proper to your OS. Notebook using pytorch implementation is in location `Tennis.ipynb`

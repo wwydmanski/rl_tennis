@@ -44,18 +44,15 @@ class Teacher:
 
                 # After episode updates
                 scores_ep.append(np.max(scores))
-                if any(scores_ep)>1:
-                    print(scores_ep)
-                    raise EnvironmentError
-
                 self.agent.reset()
 
+                # Updating postfix
                 if i_episode > mean_window:
                     mn = np.mean(scores_ep[-mean_window:])
                 else:
                     mn = np.mean(scores_ep[-i_episode:])
 
-                if len(self.agent.memory)>1024:
+                if self.agent.learning_started:
                     agent_loss = self.agent.actor_loss 
                     critic_loss = self.agent.critic_loss
                 else:
