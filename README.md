@@ -13,7 +13,7 @@ The observation space consists of 8 variables corresponding to the position and 
 Agent's brain was a Deep Deterministic Policy Gradient, an Actor-Critic class Reinforcement Learning algorithm, implemented according to https://arxiv.org/abs/1509.02971 with Ornstein-Uhlenbeck random process.
 
 ## Results
-Agent was able to solve the environment in 881 episodes (mean window starting at 32nd episode exceeded solution threshold)
+Agent was able to solve the environment in 881 episodes (mean window starting at 881st episode exceeded solution threshold)
 
 ![Result](result.png)
 
